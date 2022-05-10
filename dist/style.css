@@ -1,0 +1,55 @@
+body {
+    margin: 0px;
+    background-color: gainsboro;
+}
+#container {
+    
+    padding: 0.5vw;
+}
+
+#players-container {
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 10px;
+}
+
+#template-container {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    column-gap: 2vw;
+    padding-top: 1vh;
+}
+
+.player {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: orange;
+    border-radius: 5px;
+    justify-items: center;
+    row-gap: 5px;
+    
+}
+img {
+    background-color: aliceblue;
+    margin: 10px;
+    box-shadow: 1px 2px ;
+    width: 90%;
+}
+
+.inputs {
+    height: 2vw;
+    font-family: "Audiowide", sans-serif;
+}
+
+.buttons {
+    font-family: "Audiowide", sans-serif;
+    font-size: large;
+}
+
+.text{
+    font-size: x-large;
+    font-family: "Trirong", serif;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <title>Document</title>
+</head>
+<body>
+
+    <script id="input-template" type = "text/x-handlebars-template" >
+        <div id="template-container">
+            <input type="text" class="inputs"> <button type="button" class="buttons">GET ROSTER</button>
+        </div>
+    </script>
+    
+    <script id="players-template" type = "text/x-handlebars-template">
+        <div id="players-container" >
+            {{#each players}}
+            <div class="player">
+                <span class ="text" >{{firstName}} {{lastName}}</span>
+                <span class ="text" >{{jersey}}</span>
+                <img src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" onclick="imageClick(this)">
+                <span class ="text" >{{pos}}</span>
+            </div>
+            {{/each}}
+        </div>    
+    </script>
+    
+
+    <div id="container">
+
+    </div>
+</body>
+<script src="./jquery/dist/jquery.js"></script>
+<script src="./handlebars/dist/handlebars.js"></script>
+<script src="Render.js"></script>
+<script src="main.js"></script>
+</html>
