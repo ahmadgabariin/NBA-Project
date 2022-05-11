@@ -38,6 +38,15 @@ app.get(`/teams/:teamName` , function (request, response) {
 
 app.get(`/playerStats/:player` , function (request , response) {
     const player = request.params.player
+    let playerName = player.split(` `)
+    let playerFullName = {firstName : playerName[0] , lastName : playerName[1]}
+    let apiURL = `https://nba-players.herokuapp.com/players-stats/${playerFullName.lastName}/${playerFullName.firstName}`
+
+    urllib.request(apiURL, function (err , data , res) {
+        response.send( JSON.parse(data) )
+    })
+
+    
 })
 
 app.listen(port , function () {

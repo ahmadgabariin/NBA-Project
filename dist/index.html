@@ -22,12 +22,16 @@
             <div class="player">
                 <span class ="text" >{{firstName}} {{lastName}}</span>
                 <span class ="text" >{{jersey}}</span>
-                <img src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" onclick="imageClick(this)">
+                <div class="image-container">
+                    <img src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" onclick="imageClick(this)">
+                </div>
                 <span class ="text" >{{pos}}</span>
             </div>
             {{/each}}
         </div>    
     </script>
+
+    
     
 
     <div id="container">

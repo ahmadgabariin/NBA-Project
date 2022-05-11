@@ -30,7 +30,7 @@ body {
     border-radius: 5px;
     justify-items: center;
     row-gap: 5px;
-    
+    align-content: center;
 }
 img {
     background-color: aliceblue;
@@ -52,4 +52,15 @@ img {
 .text{
     font-size: x-large;
     font-family: "Trirong", serif;
+}
+
+.image-container {
+    position: relative;
+}
+
+.player-stats {
+    position: absolute;
+    top: 0px;
+    margin: 15px;
+    right: 50%;
 }
